@@ -2,7 +2,7 @@
     "name": "prepack-vscode",
     "displayName": "prepack-vscode",
     "description": "A tool for making JavaScript code run faster.",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "publisher": "RobinMalfait",
     "engines": {
         "vscode": "^1.5.0"
@@ -10,11 +10,11 @@
     "homepage": "https://marketplace.visualstudio.com/items?itemName=RobinMalfait.prepack-vscode",
     "repository": {
         "type": "git",
-        "url": "http://github.com/RobinMalfait/prettier-eslint-code.git"
+        "url": "http://github.com/RobinMalfait/prepack-vscode.git"
     },
     "license": "MIT",
     "bugs": {
-        "url": "http://github.com/RobinMalfait/prettier-eslint-code/issues"
+        "url": "http://github.com/RobinMalfait/prepack-vscode/issues"
     },
     "categories": [
         "Formatters"
