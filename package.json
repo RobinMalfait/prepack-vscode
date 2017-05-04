@@ -115,7 +115,7 @@
                 },
                 "prepack.timeout": {
                     "type": "number",
-                    "default": "Infinity",
+                    "default": 9007199254740991,
                     "description": "Number of milliseconds to run a program before it times out. Useful to avoid infinite loops in the Prepacked program."
                 },
                 "prepack.strictlyMonotonicDateNow": {
