@@ -40,10 +40,6 @@ export function fullDocumentSelection(document: TextDocument): Selection {
 
 export function format(code: string) {
     const options = workspace.getConfiguration('prepack') as any;
-    
-    options.timeout = options.timeout === "Infinity"
-        ? Infinity
-        : options.timeout;
 
     try {
         showStatusBarMessage('Prepack: $(sync)', 'Prepacking...');
