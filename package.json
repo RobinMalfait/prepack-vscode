@@ -1,145 +1,145 @@
 {
-  "name": "prepack-vscode",
-  "displayName": "prepack-vscode",
-  "description": "A tool for making JavaScript code run faster.",
-  "version": "0.1.0",
-  "publisher": "RobinMalfait",
-  "engines": {
-    "vscode": "^1.5.0"
-  },
-  "homepage": "https://marketplace.visualstudio.com/items?itemName=RobinMalfait.prepack-vscode",
-  "repository": {
-      "type": "git",
-      "url": "http://github.com/RobinMalfait/prettier-eslint-code.git"
-  },
-  "license": "MIT",
-  "bugs": {
-      "url": "http://github.com/RobinMalfait/prettier-eslint-code/issues"
-  },
-  "categories": [
-    "Formatters"
-  ],
-  "activationEvents": [
-    "onCommand:prepack.format"
-  ],
-  "main": "./out/src/extension",
-  "contributes": {
-    "commands": [
-      {
-        "command": "prepack.format",
-        "title": "Prepack"
-      }
+    "name": "prepack-vscode",
+    "displayName": "prepack-vscode",
+    "description": "A tool for making JavaScript code run faster.",
+    "version": "0.1.1",
+    "publisher": "RobinMalfait",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "homepage": "https://marketplace.visualstudio.com/items?itemName=RobinMalfait.prepack-vscode",
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/RobinMalfait/prettier-eslint-code.git"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "http://github.com/RobinMalfait/prettier-eslint-code/issues"
+    },
+    "categories": [
+        "Formatters"
     ],
-    "keybindings": [
-      {
-        "command": "prepack.format",
-        "key": "ctrl+alt+p"
-      }
+    "activationEvents": [
+        "onCommand:prepack.format"
     ],
-    "configuration": {
-      "title": "Prepack",
-      "properties": {
-        "prepack.filename": {
-          "type": "string",
-          "default": null,
-          "description": "Filename to use in error stacks."
-        },
-        "prepack.inputSourceMapFilename": {
-          "type": "string",
-          "default": null,
-          "description": "If provided, this input source map file is used as the input before generating a new source map."
-        },
-        "prepack.sourceMaps": {
-          "type": "boolean",
-          "default": false,
-          "description": "Determines whether a source map file should be generated."
-        },
-        "prepack.compatibility": {
-          "type": "string",
-          "default": "browser",
-          "enum": [
-            "browser",
-            "jsc-600-1-4-17"
-          ],
-          "description": "Select a built-in environment compatibility. More built-in environments will be added in the future."
-        },
-        "prepack.mathRandomSeed": {
-          "type": "string",
-          "default": null,
-          "description": "If a seed string is provided, Math.random() can be relied on and used in concrete code paths."
-        },
-        "prepack.speculate": {
-          "type": "boolean",
-          "default": false,
-          "description": "Speculatively pre-execute more `require(...)` calls if they're part of the residual program."
-        },
-        "prepack.trace": {
-          "type": "boolean",
-          "default": false,
-          "description": "Logs evaluated function calls."
-        },
-        "prepack.debugNames": {
-          "type": "boolean",
-          "default": false,
-          "description": "If true, try to retain original variable and function names as part of the generated code."
-        },
-        "prepack.singlePass": {
-          "type": "boolean",
-          "default": false,
-          "description": "Currently, the serializer makes two passes to optimize the variable naming in the output but this is slow so this lets you opt for a single pass. This option is expected to be unnecessary in the future."
-        },
-        "prepack.logStatistics": {
-          "type": "boolean",
-          "default": false,
-          "description": "If true, logs statistics about the number of objects, functions and ids generated."
-        },
-        "prepack.logModules": {
-          "type": "boolean",
-          "default": false,
-          "description": "If true, logs modules evaluated."
-        },
-        "prepack.delayUnsupportedRequires": {
-          "type": "boolean",
-          "default": false,
-          "description": "If true, speculatively executed requires that failed to execute doesn't get preexecuted."
-        },
-        "prepack.internalDebug": {
-          "type": "boolean",
-          "default": false,
-          "description": "If true, prints the JS stack inside of Prepack along with the stack in the Prepacked program. Useful for debugging Prepack itself."
-        },
-        "prepack.uniqueSuffix": {
-          "type": "string",
-          "default": null,
-          "description": "If adds a unique suffix to generated IDs so that they don't risk colliding with anything else in the program. Expected to be automatic in the future."
-        },
-        "prepack.timeout": {
-          "type": "number",
-          "default": "Infinity",
-          "description": "Number of milliseconds to run a program before it times out. Useful to avoid infinite loops in the Prepacked program."
-        },
-        "prepack.strictlyMonotonicDateNow": {
-          "type": "boolean",
-          "default": false,
-          "description": "Currently only used to run the Test262 test suite which requires reading Date.now() in increasing order."
+    "main": "./out/src/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "prepack.format",
+                "title": "Prepack"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "prepack.format",
+                "key": "ctrl+alt+p"
+            }
+        ],
+        "configuration": {
+            "title": "Prepack",
+            "properties": {
+                "prepack.filename": {
+                    "type": "string",
+                    "default": null,
+                    "description": "Filename to use in error stacks."
+                },
+                "prepack.inputSourceMapFilename": {
+                    "type": "string",
+                    "default": null,
+                    "description": "If provided, this input source map file is used as the input before generating a new source map."
+                },
+                "prepack.sourceMaps": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Determines whether a source map file should be generated."
+                },
+                "prepack.compatibility": {
+                    "type": "string",
+                    "default": "browser",
+                    "enum": [
+                        "browser",
+                        "jsc-600-1-4-17"
+                    ],
+                    "description": "Select a built-in environment compatibility. More built-in environments will be added in the future."
+                },
+                "prepack.mathRandomSeed": {
+                    "type": "string",
+                    "default": null,
+                    "description": "If a seed string is provided, Math.random() can be relied on and used in concrete code paths."
+                },
+                "prepack.speculate": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Speculatively pre-execute more `require(...)` calls if they're part of the residual program."
+                },
+                "prepack.trace": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Logs evaluated function calls."
+                },
+                "prepack.debugNames": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "If true, try to retain original variable and function names as part of the generated code."
+                },
+                "prepack.singlePass": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Currently, the serializer makes two passes to optimize the variable naming in the output but this is slow so this lets you opt for a single pass. This option is expected to be unnecessary in the future."
+                },
+                "prepack.logStatistics": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "If true, logs statistics about the number of objects, functions and ids generated."
+                },
+                "prepack.logModules": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "If true, logs modules evaluated."
+                },
+                "prepack.delayUnsupportedRequires": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "If true, speculatively executed requires that failed to execute doesn't get preexecuted."
+                },
+                "prepack.internalDebug": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "If true, prints the JS stack inside of Prepack along with the stack in the Prepacked program. Useful for debugging Prepack itself."
+                },
+                "prepack.uniqueSuffix": {
+                    "type": "string",
+                    "default": null,
+                    "description": "If adds a unique suffix to generated IDs so that they don't risk colliding with anything else in the program. Expected to be automatic in the future."
+                },
+                "prepack.timeout": {
+                    "type": "number",
+                    "default": "Infinity",
+                    "description": "Number of milliseconds to run a program before it times out. Useful to avoid infinite loops in the Prepacked program."
+                },
+                "prepack.strictlyMonotonicDateNow": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Currently only used to run the Test262 test suite which requires reading Date.now() in increasing order."
+                }
+            }
         }
-      }
+    },
+    "scripts": {
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.0.3",
+        "vscode": "^1.0.0",
+        "mocha": "^2.3.3",
+        "@types/node": "^6.0.40",
+        "@types/mocha": "^2.2.32"
+    },
+    "dependencies": {
+        "prepack": "^0.2.0"
     }
-  },
-  "scripts": {
-    "vscode:prepublish": "tsc -p ./",
-    "compile": "tsc -watch -p ./",
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "node ./node_modules/vscode/bin/test"
-  },
-  "devDependencies": {
-    "typescript": "^2.0.3",
-    "vscode": "^1.0.0",
-    "mocha": "^2.3.3",
-    "@types/node": "^6.0.40",
-    "@types/mocha": "^2.2.32"
-  },
-  "dependencies": {
-    "prepack": "^0.2.0"
-  }
 }
