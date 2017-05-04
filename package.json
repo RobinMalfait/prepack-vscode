@@ -1,8 +1,8 @@
 {
   "name": "prepack-vscode",
   "displayName": "prepack-vscode",
-  "description": "",
-  "version": "0.0.1",
+  "description": "A tool for making JavaScript code run faster.",
+  "version": "0.1.0",
   "publisher": "RobinMalfait",
   "engines": {
     "vscode": "^1.5.0"
